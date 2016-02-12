@@ -95,7 +95,7 @@ class LockFile(object):
         # Acquire the lock file
         while self._fd is None:
             # Open the file
-            fd = os.open(path, os.O_CREAT | os.O_WRONLY, 0666)
+            fd = os.open(path, os.O_CREAT | os.O_WRONLY, 0o666)
             try:
                 # Acquire an exclusive lock
                 if wait:
@@ -103,7 +103,7 @@ class LockFile(object):
                 else:
                     try:
                         fcntl.lockf(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-                    except IOError, e:
+                    except IOError as e:
                         if e.errno in (errno.EACCES, errno.EAGAIN):
                             raise LockError(
                                 'Lock file is held by another process: '
@@ -116,7 +116,7 @@ class LockFile(object):
                 # opening and the lock acquisition)
                 try:
                     stat1 = os.stat(path)
-                except OSError, e:
+                except OSError as e:
                     if e.errno != errno.ENOENT:
                         raise
                 else:
