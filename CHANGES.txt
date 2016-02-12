@@ -1,0 +1,22 @@
+# $Id: CHANGES.txt 18 2007-10-24 04:47:12Z horcicka $
+
+Version 2.0:
+    Released: 2007-10-24
+
+    New features:
+        Use of fcntl.flock has been replaced by fcntl.lockf for better
+        portability.
+
+        Removing the lock file before its releasing has been made optional.
+        The required behavior can now be set at the LockFile instance creation
+        time.
+
+    Fixed bugs:
+        Lock file creation mode has been changed to 0666. Previously it was
+        0777.
+
+        Unexpected exceptions from os.stat are not being hidden anymore.
+
+
+Version 1.0:
+    Released: 2007-05-28

@@ -1,0 +1,19 @@
+Metadata-Version: 1.0
+Name: lock_file
+Version: 2.0
+Summary: Lock file manipulation
+Home-page: http://martin.horcicka.eu/python/lock_file/
+Author: Martin Horcicka
+Author-email: martin@horcicka.eu
+License: Public Domain
+Download-URL: http://martin.horcicka.eu/python/lock_file/lock_file-2.0.tar.gz
+Description: 
+        Lock file is a traditional means of synchronization among processes. In
+        this module it is implemented as an empty regular file exclusively
+        locked using fcntl.lockf. When it is to be released it is removed by
+        default. However, if all cooperating processes turn off the removal,
+        they get a guaranteed order of acquisitions and better scalability.
+        
+Platform: Unix-like systems
+Classifier: License :: Public Domain
+Classifier: Operating System :: POSIX
