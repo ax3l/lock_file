@@ -5,9 +5,11 @@ This software is in the public domain (there is no license).
 
 # About this Fork
 
-Since I could not find an active upstream repository nor a working
-maintainer contact of [this pip project](https://pypi.python.org/pypi/lock_file)
-I published my small patch here.
+Since I could not find an active upstream repository ~~nor a working
+maintainer contact~~ of
+[this pip project](https://pypi.python.org/pypi/lock_file)
+I published my small patch here. *Update: the changes might be integrated*
+*soon since the maintainer is still active! :)*
 
 
 # Install
